@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bifurcator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+<body>
+<!--   active-->
+    <header class="header" id="header">
+       <div class="header_content" >
+            <div class="header_user">
+                <span class="header_username" id="username-header">
+                    H
+                </span>
+
+            </div>
+
+            <button class="header_exit exit" type="button"
+               name="exit" title="Close Bifurcator">
+                <img src="Vectors/Exit.svg" alt="exit"/>
+            </button>
+       </div>
+<!--active - работа с бургер меню-->
+       <div class="header_mobile">
+           <button class="header_burger" type="button">
+<!--              active-->
+               <span>Menu</span>
+           </button>
+           <h1 class="header_mobile_title">Bifurcator</h1>
+           <button class="header_search" type="button" name="search">
+               <img src="Vectors/search_mobile.svg" alt="search">
+           </button>
+       </div>
+    </header>
+<!-----------------------ASIDE---------------------------->
+<!--    active, mobile-->
+    <aside class="aside" id="aside">
+        <div class="aside_content">
+            <button class="aside_user" type="button" name="user" id="username-aside-button" >
+                <span class="aside_username" id='username-aside'>
+                    H
+                </span>
+            </button>
+<!--            active-->
+            <button class="aside_svg active" title="Messages">
+                <span>Сообщения</span>
+                <img src="Vectors/Message.svg" alt="Messages">
+            </button>
+            <button class="aside_svg" title="Contacts">
+                <span>Контакты</span>
+                <img  src="Vectors/contacts.svg" alt="Contacts">
+            </button>
+        </div>
+        <button class="aside_svg aside_svg--feather">
+                <span>Настройки</span>
+                <img src="Vectors/feather_settings.svg" alt="Set Up">
+        </button>
+
+        <button class="aside_svg aside_svg--exit exit">
+                <span>Выйти</span>
+                <img src="Vectors/exitMobile.svg" alt="Exit">
+        </button>
+    </aside>
+<!-----------------------Section------------------------>
+<!--   active, mobile-->
+    <section class="section" id="section">
+<!--------------------------------Chat------------------------>
+<!--       active, mobile-->
+        <div class="chat" >
+
+            <div class="chat_item chat_search">
+                <form class="chat_form" action="#" name="search" method="post">
+                    <input type="text" placeholder="Поиск" id="find-person" autocomplete="off">
+                    <button type="button" name="chat_search" id="chat-search" >
+                        <img class="chat_scan" src="Vectors/search.svg" alt="search" title="search">
+                    </button>
+                </form>
+                <h2 class="chat_title">Чат</h2>
+            </div>
+            <div class="chat_users" id="all-users">
+            </div>
+        </div>
+
+     <!--------------------SEARCH------------------------->
+<!--     active, mobile-->
+     <div class="search" id="active-users">
+
+            <div class="search_item search_input">
+               <h2 class="search_title">Поиск</h2>
+
+                <form class="search_form" action="#" name="search" method="post">
+
+                   <label class="search_string" for="search_date_from">
+                       <span class="search_option">Поиск по дате. C:</span>
+                       <input  type="date" id="search_date_from">
+                   </label>
+
+                   <label class="search_string" for="search_date_to">
+                       <span class="search_option">Поиск по дате. До:</span>
+                       <input  type="date" id="search_date_to">
+                   </label>
+
+                   <label class="search_string" for="search_author">
+                       <span class="search_option">Поиск по автору:</span>
+                       <input type="text" id="search_author">
+                   </label>
+
+                   <label class="search_string" for="search_message">
+                       <span class="search_option">Поиск по тексту:</span>
+                       <input type="text" id="search_message">
+                   </label>
+
+                   <button class="search_button" type="button" name="search" id="filterSearch">
+                        <span>Искать</span>
+                        <img class="search_scan" src="Vectors/search.svg" alt="search" title="search">
+                    </button>
+                </form>
+            </div>
+
+            <div  class="search_item search_result">
+                    <h2 class="search_title">Результаты</h2>
+            </div>
+
+
+<!-- Don't touch!!!
+            <button  class="chat_item chat_item--selected chat_item--third">
+                <div class="chat_content">
+
+                    <div class="chat_user active">
+                        <span class="chat_username">
+                            М
+                        </span>
+                    </div>
+
+                   <div class="chat_text">
+                        <h3 class="chat_friend">Майк</h3>
+
+                        <pre class="chat_message"><span>Вы: </span>Пока</pre>
+                   </div>
+
+                   <div class="chat_info">
+                       <p class="chat_time">12:22</p>
+                       <div class="chat_amount">
+                           <span></span>
+                       </div>
+                   </div>
+                </div>
+            </button>
+-->
+        </div>
+
+     <!-----------------CONVERSATION----------------------->
+<!--       active, mobile-->
+        <div class="conversation active mobile">
+
+            <div class="conversation_header">
+
+                <div class="conversation_person">
+                    <div class="conversation_user">
+                        <span class="conversation_username" id="conversation-username">
+                            <img src="Images/mainChat.png" alt="chat">
+                        </span>
+                    </div>
+                    <div class="conversation_info">
+                        <h3 class="conversation_name" id="conversation-name">
+                            Чат Бифуркатора
+                        </h3>
+                        <p class="conversation_return">
+                           <i class="fas fa-arrow-circle-left"></i> Вернуть сообщения
+                        </p>
+                    </div>
+                </div>
+
+                <div class="conversation_date" id="conversation-date">
+                    <span>13 октября</span>
+                </div>
+
+                <div class="conversation_button" title="Menu">
+                    <img src="Vectors/points.svg" alt="points">
+<!--active-->
+                    <div class="options">
+
+                        <button class="conversation_option conversation_option--first">
+                            <span>Поиск по дате</span>
+                            <img src="Vectors/search.svg" alt="search">
+                        </button>
+
+                        <button class="conversation_option">
+                            <span>Поиск по автору</span>
+                            <img src="Vectors/search.svg" alt="search">
+                        </button>
+
+                        <button class="conversation_option">
+                            <span>Поиск по сообщению</span>
+                            <img src="Vectors/search.svg" alt="search">
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        <!------------------MESSAGES------------------->
+            <div class="messages" id="messages-list">
+
+            </div>
+<!--active-->
+            <div class="sendstring">
+                <form action="#" class="sendstring_form" name="sendingString">
+                    <div class="sendstring_clip">
+                        <label class="clip_content" for="clip">
+                            <input id="clip" type="file" multiple accept="image/*,image/jpeg">
+
+                            <img class="clip" src="Vectors/clip.svg" alt="clip">
+                        </label>
+                    </div>
+
+                    <input class="sendingstring_field" type="text" placeholder="Напишите сообщение..." onfocus="ctrl.addMsgOnEnterClick();">
+
+                    <button class="sendingstring_button" type="button" name="send" onclick="ctrl.addMsg();">
+                        <img src="Vectors/cil_send.svg" alt="send">
+                    </button>
+                </form>
+<!--active-->
+                <div class="sendstring_guest">
+                    <p>Вы не можете писать, пока не авторизуетесь.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!----------------------------------------LOG IN--------------------------------------->
+<!--   active-->
+    <article class="log_in active">
+        <div class="container_log">
+            <img class="log_logo" src="Images/logo.png" alt="Logo">
+            <h2 class="log_title">Bifurcator</h2>
+            <form action="#" class="log_form active" name="log_in" method="post">
+<!--               active-->
+                <p class="log_error">Неверный логин или пароль</p>
+                <input class="log_login" type="text" placeholder="Логин" id="logIn_login">
+
+                <label class="password_area" for="logIn_password">
+                    <input class="log_password" type="password" placeholder="Пароль" id="logIn_password" autocomplete="on">
+                    <button class="log_show log_show--forbidden" type="button">
+                        <span class="forbidden"><i class="fas fa-eye-slash"></i></span>
+                        Показать пароль
+                        <span class="allowed"><i class="fas fa-eye"></i></span>
+                    </button>
+                </label>
+
+
+                <button type='button' name="forget_password" class="log_forget">Не помню пароль</button>
+                <button type="button" name="enter" class="log_enter">Войти</button>
+
+                <p class="log_or">или</p>
+                <div class="create_container">
+                    <button type="button" name="create_acc" class="log_create">Создать аккаунт</button>
+                </div>
+
+                <button type="button" name="guest" class="log_guest">Зайти как гость</button>
+            </form>
+        </div>
+    </article>
+
+    <!----------------------------------------Sign Up--------------------------------------->
+<!--    active-->
+    <article class="sign_up">
+        <div class="container_log">
+            <img class="log_logo" src="Images/logo.png" alt="Logo">
+            <h2 class="log_title">Bifurcator</h2>
+            <form action="#" class="log_form" name="log_in" method="post">
+
+                <input class="log_login" type="text" placeholder="Логин" id="sign_login">
+
+
+                <label class="password_area" for="password">
+                    <input class="log_password" type="password" placeholder="Пароль" id="password" autocomplete="on">
+                    <button class="log_show log_show--forbidden" type="button">
+                        <span class="forbidden"><i class="fas fa-eye-slash"></i></span>
+                        Показать пароль
+                        <span class="allowed"><i class="fas fa-eye"></i></span>
+                    </button>
+                </label>
+
+                <label class="password_area" for="password_2">
+                    <input class="log_password" type="password" placeholder="Повторить пароль" id="password_2" autocomplete="on">
+                    <button class="log_show log_show--forbidden" type="button">
+                        <span class="forbidden"><i class="fas fa-eye-slash"></i></span>
+                        Показать пароль
+                        <span class="allowed"><i class="fas fa-eye"></i></span>
+                    </button>
+                </label>
+<!--                active-->
+                <p class="sign_error ">Пароли не совпадают или не указан логин</p>
+                <p class="sign_error2 ">Такой логин уже существует</p>
+                <button type="button" name="enter" class="log_enter" id="sign_reg">Зарегистрироваться</button>
+
+
+                <div class="create_container">
+                    <button type="button" name="have_acc" class="sign_haveAcc">Уже есть аккаунт</button>
+                </div>
+
+                <button type="button" name="guest" class="sign_guest">Зайти как гость</button>
+            </form>
+        </div>
+    </article>
+
+   <!----------------------------------------Error--------------------------------------->
+   <!--active-->
+    <article class="error_404" id="error-404">
+        <div class="container_404">
+            <div class="title_404">
+                <span class="numb_404">4</span>
+                <img class="img_404" src="Images/alien.png" alt="alien">
+                <span class="numb_404">4</span>
+            </div>
+            <h2 class="subtitle_404">
+                Какие-то неполадки.
+                <br>
+                Похоже, эта  страница недоступна.
+            </h2>
+            <button class="button_404" type="button">
+                Вернуться на главную
+            </button>
+        </div>
+    </article>
+
+<!-------------------------FOOTER------------------------->
+    <footer class="footer">
+       <div class="footer_content register">
+           Bifurcator (новая версия от 20.05.2021) © 2021 Андрей Войтович, по всем вопросам пишите на почту ecargsid@gmail.com
+       </div>
+    </footer>
+
+
+
+<!----------------------------------TEMPLATE active Users------------------------------>
+        <template id="active-user-template">
+            <button  class="chat_item">
+                <div class="chat_content">
+                    <!--active-->
+                    <div class="chat_user active">
+                        <span class="chat_username">
+
+                        </span>
+                    </div>
+
+                   <div class="chat_text">
+                        <h3 class="chat_friend"></h3>
+
+<!--                        <pre class="chat_message"><span>Вы: </span>Пока</pre>-->
+                   </div>
+
+<!--
+                   <div class="chat_info">
+                       <p class="chat_time">12:22</p>
+                       <div class="chat_amount">
+                           <span></span>
+                       </div>
+                   </div>
+-->
+                </div>
+            </button>
+        </template>
+<!----------------------------------TEMPLATE all Users------------------------------>
+        <template id="all-user-template">
+            <button  class="chat_item">
+                <div class="chat_content">
+                    <!--active-->
+                    <div class="chat_user">
+                        <span class="chat_username">
+
+                        </span>
+                    </div>
+
+                   <div class="chat_text">
+                        <h3 class="chat_friend"></h3>
+
+<!--                        <pre class="chat_message"><span>Вы: </span>Пока</pre>-->
+                   </div>
+<!--
+
+                   <div class="chat_info">
+                       <p class="chat_time">12:22</p>
+                       <div class="chat_amount">
+                           <span></span>
+                       </div>
+                   </div>
+-->
+                </div>
+            </button>
+        </template>
+
+<!----------------------------------TEMPLATE Friends msgs------------------------------>
+       <template id='msg-user'>
+        <div class="messages_item" >
+            <div class="messages_user">
+                    <span class="messages_username">
+
+                    </span>
+            </div>
+            <div class="messages_block">
+                <div class="messages_text"> </div>
+                <div class="messages_time"> <span></span> </div>
+            </div>
+        </div>
+    </template>
+<!----------------------------------TEMPLATE Your msgs------------------------------>
+    <template id='msg-mine'>
+        <div class="messages_item messages_item--you">
+            <div class="messages_block">
+                <div class="messages_text" oncontextmenu="ctrl.giveOptions();">  </div>
+                <div class="messages_time" oncontextmenu="ctrl.giveOptions();">  </div>
+            </div>
+            <div class="messages_user">
+                     <span class="messages_username">
+
+                    </span>
+            </div>
+        <!--active-->
+            <div class="message_options" >
+
+                <button class="message_option message_option--first" onclick="ctrl.editMsg();">
+                    Изменить
+                </button>
+
+                <button class="message_option"  onclick="ctrl.removeMsg();">
+                    Удалить
+                </button>
+            </div>
+            <div class="messages_item_form">
+
+                <input type="text">
+                <button> Ok</button>
+
+            </div>
+        </div>
+    </template>
+
+<script src="script.js"></script>
+<script src="scriptDOM.js"></script>
+<script src="scriptEvents.js"></script>
+
+</body>
+</html>
